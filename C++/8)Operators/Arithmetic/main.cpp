@@ -1,86 +1,119 @@
-#include <iostream> // Required for cout, cin
+#include <iostream> // Required for input (cin) and output (cout)
 using namespace std;
 
 int main() {
-    // ============================================
-    // 1️⃣ What are Arithmetic Operators?
-    // ============================================
+
+    // =====================================================
+    // 1️⃣ INTRODUCTION: What are Arithmetic Operators?
+    // =====================================================
     /*
-        📌 Definition:
-        Arithmetic operators are used to perform mathematical
-        calculations between numerical values.
+        📖 Definition:
+        Arithmetic operators in C++ are special symbols
+        that perform basic math operations between numeric values
+        like integers, floats, and doubles.
 
-        ✅ Common Arithmetic Operators in C++:
-        1. Addition (+)       → Adds two numbers
-        2. Subtraction (-)    → Subtracts one number from another
-        3. Multiplication (*) → Multiplies two numbers
-        4. Division (/)       → Divides one number by another
-        5. Modulus (%)        → Finds the remainder after division
+        ✅ MAIN OPERATORS:
+        1. ➕ Addition (+)       → Adds two numbers
+        2. ➖ Subtraction (-)    → Subtracts one number from another
+        3. ✖ Multiplication (*)  → Multiplies two numbers
+        4. ➗ Division (/)       → Divides one number by another
+        5. 🪙 Modulus (%)        → Gives remainder of integer division
 
-        --------------------------------------------
-        ⚠️ Important Notes:
-        - Integer Division:
-            If BOTH operands are integers → result is an integer
-            Example: 5 / 2 = 2 (decimal part is discarded)
-        - Floating-point Division:
-            If ANY operand is float/double → result will be decimal
-            Example: 5.0 / 2 = 2.5
-        - Modulus (%) works ONLY with integers (not float/double).
+        ---------------------------------------------------
+        📌 KEY RULES TO REMEMBER:
+        1. **Integer Division**
+            - If both numbers are integers → result is integer.
+            - Decimal part is discarded (NOT rounded!).
+              Example: 5 / 2 → 2   (0.5 is thrown away)
+
+        2. **Floating-Point Division**
+            - If at least one number is float/double → result keeps decimals.
+              Example: 5.0 / 2 → 2.5
+
+        3. **Modulus Rules**
+            - Works ONLY with integers.
+              Example: 10 % 3 → 1
+            - ❌ Not valid for float/double (10.5 % 3 → ERROR)
     */
 
-    cout << "=== Arithmetic Operators Output ===" << endl;
+    cout << "=== Arithmetic Operators Demonstration ===\n\n";
 
-    int a = 10, b = 3; // Example numbers
+    int a = 10, b = 3; // Example integers
 
-    // --------------------------------------------
-    // Addition
-    // --------------------------------------------
+    // ----------------------------------------
+    // ➕ 1. ADDITION (+)
+    // ----------------------------------------
     cout << "Addition (a + b): " << (a + b) << endl;
-    /*
-        10 + 3 = 13
-    */
+    // 10 + 3 = 13
 
-    // --------------------------------------------
-    // Subtraction
-    // --------------------------------------------
+    // ----------------------------------------
+    // ➖ 2. SUBTRACTION (-)
+    // ----------------------------------------
     cout << "Subtraction (a - b): " << (a - b) << endl;
-    /*
-        10 - 3 = 7
-    */
+    // 10 - 3 = 7
 
-    // --------------------------------------------
-    // Multiplication
-    // --------------------------------------------
+    // ----------------------------------------
+    // ✖ 3. MULTIPLICATION (*)
+    // ----------------------------------------
     cout << "Multiplication (a * b): " << (a * b) << endl;
-    /*
-        10 * 3 = 30
-    */
+    // 10 * 3 = 30
 
-    // --------------------------------------------
-    // Division (Integer Division)
-    // --------------------------------------------
+    // ----------------------------------------
+    // ➗ 4. DIVISION (Integer Division)
+    // ----------------------------------------
     cout << "Division (a / b): " << (a / b) << endl;
     /*
         10 / 3 = 3
-        (Decimal part 0.333 is discarded because a & b are integers)
+        Reason:
+        - Both operands are integers.
+        - Decimal part 0.333... is discarded.
     */
 
-    // --------------------------------------------
-    // Modulus (Remainder)
-    // --------------------------------------------
+    // ----------------------------------------
+    // 🪙 5. MODULUS (%)
+    // ----------------------------------------
     cout << "Modulus (a % b): " << (a % b) << endl;
     /*
-        10 % 3 → Remainder is 1
+        10 % 3 = 1
+        Reason:
+        - 3 fits into 10 → 3 times (3×3 = 9)
+        - Remainder: 10 - 9 = 1
     */
 
-    // ============================================
-    // 2️⃣ Example of Floating-Point Division
-    // ============================================
-    double x = 10, y = 3;
-    cout << "Floating-point Division (x / y): " << (x / y) << endl;
+    // =====================================================
+    // 2️⃣ FLOATING-POINT DIVISION
+    // =====================================================
+    double x = 10, y = 3; // Using double for decimal values
+    cout << "\nFloating-point Division (x / y): " << (x / y) << endl;
     /*
-        10.0 / 3.0 = 3.33333 (accurate decimal result)
+        10.0 / 3.0 = 3.33333...
+        Reason:
+        - At least one operand is double.
+        - Decimal accuracy is preserved.
     */
 
     return 0;
 }
+
+/*
+==========================================================
+🧠 MEMORY TRICKS:
+----------------------------------------------------------
+1. "All Smart Maths Divides Modestly"
+   ➡ A S M D M → Addition, Subtraction, Multiplication, Division, Modulus.
+
+2. INTEGER Division → "Cut off the tail" (decimal part is chopped off).
+3. FLOAT Division → "Float keeps the tail" (decimal part stays).
+4. MODULUS → Think of "leftover pizza slices" after equal sharing.
+
+----------------------------------------------------------
+✅ QUICK TABLE:
+Operator   | Symbol | Works With   | Example  | Result
+-----------|--------|--------------|----------|--------
+Addition   | +      | All numbers  | 5 + 2    | 7
+Subtraction| -      | All numbers  | 5 - 2    | 3
+Multiply   | *      | All numbers  | 5 * 2    | 10
+Division   | /      | All numbers  | 5 / 2    | 2 (int) / 2.5 (float)
+Modulus    | %      | Integers only| 5 % 2    | 1
+==========================================================
+*/

@@ -1,5 +1,5 @@
 // ===============================================
-//   For Loop and While Loop in C++
+//   FOR Loop and WHILE Loop in C++
 // ===============================================
 
 #include <iostream> 
@@ -10,54 +10,94 @@ int main() {
     // ==============================
     // 1️⃣ FOR LOOP
     // ==============================
-    // Syntax:
-    // for (initialization; condition; update) {
-    //      // loop body
-    // }
-    //
-    // Meaning:
-    // - Initialization: Runs once before the loop starts (e.g., int i = 1)
-    // - Condition: Loop runs while this is true (e.g., i <= 5)
-    // - Update: Runs after each loop iteration (e.g., i++)
-    //
-    // Example: Print numbers from 1 to 5
+    /*
+        📌 Definition:
+        A FOR loop repeats a block of code a fixed number of times.
+        It has 3 parts all in one line: 
+        1. Initialization → Set starting value (runs only once at the start)
+        2. Condition → Checked before each iteration; loop continues while TRUE
+        3. Update → Changes the loop variable after each run
+
+        🔹 Syntax:
+            for (initialization; condition; update) {
+                // loop body
+            }
+        
+        🔹 Example: Print numbers 1 to 5
+    */
     cout << "For Loop Output:" << endl;
 
     for (int i = 1; i <= 5; i++) {
-        cout << i << " "; // Prints numbers 1 2 3 4 5
+        cout << i << " "; // Prints: 1 2 3 4 5
     }
-    cout << endl; // Move to the next line after loop ends
+    cout << endl; // Goes to the next line after loop finishes
 
 
     // ==============================
     // 2️⃣ WHILE LOOP
     // ==============================
-    // Syntax:
-    // while (condition) {
-    //      // loop body
-    // }
-    //
-    // Meaning:
-    // - Condition is checked first.
-    // - If true → loop body runs, then condition is checked again.
-    // - If false → loop stops immediately.
-    //
-    // Example: Print numbers from 1 to 5
+    /*
+        📌 Definition:
+        A WHILE loop keeps running **as long as** its condition is TRUE.
+        You must handle initialization and update **separately**.
+
+        🔹 Steps:
+        1. Initialization → Do it before the loop
+        2. Condition → Checked first; if false, loop never runs
+        3. Loop body → Executes if condition is true
+        4. Update → Change loop variable inside the loop body
+
+        🔹 Syntax:
+            while (condition) {
+                // loop body
+            }
+
+        🔹 Example: Print numbers 1 to 5
+    */
     cout << "While Loop Output:" << endl;
 
-    int j = 1; // Initialization is done separately
-    while (j <= 5) { // Loop runs while j is less than or equal to 5
-        cout << j << " "; // Prints numbers 1 2 3 4 5
-        j++; // Increment j by 1 (update step)
+    int j = 1; // Initialization
+    while (j <= 5) { // Condition checked before each run
+        cout << j << " "; // Prints: 1 2 3 4 5
+        j++; // Update step
     }
-    cout << endl; // Move to the next line after loop ends
+    cout << endl;
 
 
     // ==============================
-    // Key Difference:
-    // - FOR loop → Best when number of iterations is known.
-    // - WHILE loop → Best when you only know the condition to stop.
+    // 3️⃣ KEY DIFFERENCES
     // ==============================
+    /*
+        ✅ FOR loop:
+           - Use when you know EXACTLY how many times to run
+           - All parts (init, condition, update) are in one line
+
+        ✅ WHILE loop:
+           - Use when you DON'T know how many times to run
+           - You only know the condition for stopping
+           - Initialization & update happen separately
+    */
 
     return 0;
 }
+
+
+// ===============================================
+// 📦 MEMORY TRICKS
+// ===============================================
+
+/*
+1. 🎯 FOR loop = "Fixed Count" → F for Fixed
+   - Good when count is PRE-DECIDED
+
+2. 🔄 WHILE loop = "Watch Condition"
+   - Keeps running WHILE condition is true
+
+3. 🧠 Think of it like:
+   - FOR = “Start to End in Steps” → like counting 1 to 10
+   - WHILE = “Keep Going Until Told to Stop” → like waiting until rain stops
+
+4. Formula to Remember:
+   FOR → All in ONE line (Init; Check; Change)
+   WHILE → Spread OUT (Init, Check, Body, Change)
+*/

@@ -2,23 +2,24 @@
 using namespace std;
 
 int main() { 
+    int age;  
+    cout << "Enter your age: ";  
 
-    // 4️⃣ Variable Declaration
-    int age; 
+    // =====================================================
+    // 3️⃣ TAKING INPUT FROM THE USER
+    // =====================================================
+    cin >> age;  
+    /*
+       📌 cin → "character input" → takes data from the input stream (keyboard).
+       📌 '>>' → stream extraction operator → extracts data from the stream into a variable.
+       📌 Here, whatever the user types will be stored in the memory location of 'age'.
 
-    // 5️⃣ Asking the user for input
-    cout << "Enter your age: ";  // Prints text to the console (output)
-                                 // '<<' is the stream insertion operator — sends data to output stream
+       Steps:
+         1. Program waits for user to type a number and press Enter.
+         2. That number travels from the input stream → into the variable 'age'.
+    */
 
-    // 6️⃣ Taking input from the user
-    cin >> age;       // Waits for the user to type a number and press Enter
-                      // '>>' is the stream extraction operator — takes data from input stream into variable
-                      // The entered value is stored in the memory location of 'age'
-
-    // 7️⃣ Displaying the result
     cout << "Your age is: " << age << endl;  
-                      // Prints the text and the value stored in 'age'
-                      // 'endl' moves the cursor to the next line (like pressing Enter)
 
-    return 0; 
+    return 0;  
 }

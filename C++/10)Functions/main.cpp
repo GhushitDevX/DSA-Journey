@@ -1,6 +1,3 @@
-// =====================================================
-// 🚀 FUNCTIONS IN C++ — COMPLETE GUIDE
-// =====================================================
 #include <iostream>
 #include <cmath> // For built-in math functions like sqrt()
 using namespace std;

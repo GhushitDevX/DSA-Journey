@@ -13,7 +13,7 @@ A function is a reusable block of code that performs a specific task.
 1. Break large problems into smaller, manageable tasks
 2. Avoid repeating the same code (reduces redundancy)
 3. Improve readability & maintainability
-4. Allow easier debugging and testing
+4. Allow easier debugging and testing 
 
 🧠 ANALOGY:
 Think of a function like a vending machine:
